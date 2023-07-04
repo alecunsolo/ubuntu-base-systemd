@@ -6,8 +6,10 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - '**/README.md'
+    paths:
+      - Dockerfile
+  schedule:
+    - cron: 30 5 * * SUN  # Every Sunday at 5.30 AM
 
 jobs:
   build:
